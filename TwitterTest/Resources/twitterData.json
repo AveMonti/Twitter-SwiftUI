@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "username": "@JohnDoe",
+    "date": "2022-02-10T10:30:00Z",
+    "text": "Just had the best coffee ever ☕️",
+    "likes": 12,
+    "retweets": 3,
+    "comments": [
+        {
+            "id": 2,
+            "username": "@Terrt",
+            "date": "2022-02-11T14:20:00Z",
+            "text": "Excited to be attending the SwiftUI conference this weekend! 🚀",
+            "likes": 32,
+            "retweets": 7,
+            "comments": [],
+            "avatarUrl": "https://picsum.photos/200/200"
+        },
+        {
+            "id": 2,
+            "username": "@Geass",
+            "date": "2022-02-11T14:20:00Z",
+            "text": "Niceeee 🚀",
+            "likes": 3,
+            "retweets": 0,
+            "comments": [],
+            "avatarUrl": "https://picsum.photos/200/200"
+        },
+        {
+            "id": 4,
+            "username": "@AliceJohnson",
+            "date": "2022-02-12T09:00:00Z",
+            "text": "Great post, thanks for sharing!",
+            "likes": 17,
+            "retweets": 4,
+            "comments": [],
+            "imageUrl": "https://picsum.photos/100/100",
+            "avatarUrl": "https://picsum.photos/200/200"
+        }
+      ],
+    "imageUrl": "https://picsum.photos/200/300",
+    "avatarUrl": "https://picsum.photos/200/200"
+  },
+  {
+    "id": 2,
+    "username": "@Boob12",
+    "date": "2022-02-10T10:30:00Z",
+    "text": "Let's learn something new ☕️",
+    "likes": 98,
+    "retweets": 3,
+    "comments": [
+        {
+            "id": 2,
+            "username": "@Xaxnoo",
+            "date": "2022-02-11T14:20:00Z",
+            "text": "Excited to be attending the SwiftUI conference this weekend! 🚀",
+            "likes": 32,
+            "retweets": 7,
+            "comments": [],
+            "avatarUrl": "https://picsum.photos/200/200"
+        },
+        {
+            "id": 4,
+            "username": "AliceJohnson",
+            "date": "2022-02-12T09:00:00Z",
+            "text": "Great post, thanks for sharing!",
+            "likes": 17,
+            "retweets": 4,
+            "comments": [],
+            "imageUrl": "https://picsum.photos/100/100",
+            "avatarUrl": "https://picsum.photos/200/200"
+        }
+      ],
+    "imageUrl": "https://picsum.photos/200/300",
+    "avatarUrl": "https://picsum.photos/200/200"
+  },
+]
