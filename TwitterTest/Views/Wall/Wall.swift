@@ -9,11 +9,11 @@ import SwiftUI
 
 struct Wall: View {
     
-    @EnvironmentObject private var modelData: ModelData
+    @EnvironmentObject private var modelData: ContentViewModel
     
     var body: some View {
         List {
-            ForEach(Array(modelData.tweetMockContent.enumerated()), id: \.element) { (index, tweet) in
+            ForEach(Array(modelData.content.enumerated()), id: \.element) { (index, tweet) in
                 WallElement(index: index)
                     .environmentObject(modelData)
             }

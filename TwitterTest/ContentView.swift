@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @EnvironmentObject private var modelData: ModelData
+    @StateObject private var viewModel = ContentViewModel()
     @State private var selectedTab = BottomBarItem.home
     
     @State private var isMenuOpen = false
@@ -21,7 +21,7 @@ struct ContentView: View {
                 VStack {
                     if selectedTab == .home {
                         TweetViewContent()
-                            .environmentObject(modelData)
+                            .environmentObject(viewModel)
                     } else if selectedTab == .notifications {
                         Text("Search")
                     } else if selectedTab == .search {
@@ -35,6 +35,9 @@ struct ContentView: View {
                         BottomBar(selectedTab: $selectedTab)
                             .padding()
                     }
+                }
+                .onAppear {
+                    viewModel.fetchContent()
                 }
                 /// End - CONTENT TWITTER WALL AND BOTTOM VIEW
                 /// Start -- side Menu
@@ -60,10 +63,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     
-    static let modelData = ModelData()
-    
     static var previews: some View {
         ContentView()
-            .environmentObject(modelData)
     }
 }

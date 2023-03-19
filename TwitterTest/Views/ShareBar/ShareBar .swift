@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ShareBar: View {
     
-    @EnvironmentObject private var modelData: ModelData
+    @EnvironmentObject private var modelData: ContentViewModel
     @Binding var index: Int
     
     var body: some View {
         HStack {
             
             ZStack {
-                MessageButton(isSet: false, counter: modelData.tweetMockContent[index].comments.count)
+                MessageButton(isSet: false, counter: modelData.content[index].comments.count)
                 NavigationLink(destination: TweetDetail(index: index).environmentObject(modelData)) {
                     EmptyView()
                 }
@@ -25,11 +25,11 @@ struct ShareBar: View {
             }
             Spacer()
             ZStack {
-                HeartButton(isSet: false, counter: modelData.tweetMockContent[index].likes)
+                HeartButton(isSet: false, counter: modelData.content[index].likes)
             }
             Spacer()
             ZStack {
-                RettwetButton(isSet: false, counter: modelData.tweetMockContent[index].retweets)
+                RettwetButton(isSet: false, counter: modelData.content[index].retweets)
             }
             Spacer()
             ShareButton(isSet: false)

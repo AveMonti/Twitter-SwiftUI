@@ -9,12 +9,10 @@ import SwiftUI
 
 @main
 struct TwitterTestApp: App {
-    @StateObject var modelData = ModelData()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(modelData)
         }
     }
 }

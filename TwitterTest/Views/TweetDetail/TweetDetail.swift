@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TweetDetail: View {
     
-    @EnvironmentObject private var modelData: ModelData
+    @EnvironmentObject private var modelData: ContentViewModel
     @State var index: Int
     
     var body: some View {
@@ -17,7 +17,7 @@ struct TweetDetail: View {
             WallElement(index: index)
                 .environmentObject(modelData)
             
-            ForEach(Array(modelData.tweetMockContent[index].comments.enumerated()), id: \.element) { (index, tweet) in
+            ForEach(Array(modelData.content[index].comments.enumerated()), id: \.element) { (index, tweet) in
                 
                 
                 WallElement(index: 0)

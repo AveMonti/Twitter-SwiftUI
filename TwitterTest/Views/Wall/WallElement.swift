@@ -9,25 +9,25 @@ import SwiftUI
 
 struct WallElement: View {
     
-    @EnvironmentObject private var modelData: ModelData
+    @EnvironmentObject private var modelData: ContentViewModel
     var index: Int
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                CircleImage(image: modelData.tweetMockContent[index].avatarUrl)
+                CircleImage(image: modelData.content[index].avatarUrl)
                     .padding(.init(top: 30, leading: 20, bottom: 30, trailing: 40))
                 
-                Text("\(modelData.tweetMockContent[index].username) - \(modelData.tweetMockContent[index].dateContent, formatter: dateFormatter)")
+                Text("\(modelData.content[index].username) - \(modelData.content[index].dateContent, formatter: dateFormatter)")
                     .font(.headline)
             }
             
-            Text(modelData.tweetMockContent[index].text)
+            Text(modelData.content[index].text)
                 .font(.body)
             
-            if let unwrappedString = modelData.tweetMockContent[index].imageUrl {
+            if let unwrappedString = modelData.content[index].imageUrl {
                 if !unwrappedString.isEmpty {
-                    AsyncImage(url: URL(string: modelData.tweetMockContent[index].imageUrl!)) { image in
+                    AsyncImage(url: URL(string: modelData.content[index].imageUrl!)) { image in
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -45,7 +45,7 @@ struct WallElement: View {
 }
 
 struct TweetViewContent: View {
-    @EnvironmentObject private var modelData: ModelData
+    @EnvironmentObject private var modelData: ContentViewModel
     
     var body: some View {
         Wall()
